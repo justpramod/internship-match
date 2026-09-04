@@ -43,14 +43,14 @@ export default async function AppliedPage({ searchParams }) {
             {search && (
               <div className="flex gap-3">
                 <BackButton />
-                <div className="text-xl font-medium">
+                <div className=" font-medium">
                   Showing results for &quot;{search}&quot;
                 </div>
               </div>
             )}
           </div>{" "}
           {(error || appliedInternhsips.length === 0) && (
-            <div className="flex justify-center items-center w-[65vw] h-[40vh] bg-white rounded-xl text-xl font-medium text-gray-500">
+            <div className="flex w-full justify-center items-center text-center md:w-[65vw] h-[40vh] bg-white rounded-xl text-xl font-medium text-gray-500">
               {error
                 ? appliedInternhsips.error
                 : "You have'nt applied to any internships yet."}
