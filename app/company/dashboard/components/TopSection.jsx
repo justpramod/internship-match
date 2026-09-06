@@ -31,7 +31,7 @@ export default function TopSection({ dashboardData, filter }) {
   ];
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row justify-between">
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-semibold">Company Dashboard</h1>
           <div className="flex gap-2 items-center text-gray-500 text-sm">
@@ -42,7 +42,7 @@ export default function TopSection({ dashboardData, filter }) {
           </div>
         </div>
         <div className="bg-white rounded-xl px-4 py-3 shadow-md flex flex-col gap-2">
-          <div>
+          <div className="flex justify-end md:justify-start items-center">
             <SelectFilter filterValue={filter} />
           </div>
           <p className="text-2xl font-semibold">
@@ -54,7 +54,7 @@ export default function TopSection({ dashboardData, filter }) {
           </p>
         </div>
       </div>
-      <div className="flex gap-4 justify-between">
+      <div className="flex flex-wrap md:flex-nowrap gap-4 justify-between">
         {intersnhipDataForCards.map((item, index) => {
           return <RoleInfoCard key={index} data={item} />;
         })}

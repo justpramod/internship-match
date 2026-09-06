@@ -1,7 +1,20 @@
 "use client";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import { useEffect, useState } from "react";
 
 export default function MostAppliedGraphSection({ internshipData, filter }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+
+    updateIsMobile();
+    mediaQuery.addEventListener("change", updateIsMobile);
+
+    return () => mediaQuery.removeEventListener("change", updateIsMobile);
+  }, []);
+
   const filterMap = new Map([
     ["1m", "last 1 month"],
     ["3m", "last 3 months"],
@@ -35,13 +48,25 @@ export default function MostAppliedGraphSection({ internshipData, filter }) {
             data={internshipData}
             margin={{
               top: 5,
-              right: 0,
-              left: 0,
+              right: isMobile ? 8 : 0,
+              left: isMobile ? 20 : 0,
               bottom: 5,
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="title" />
+            <XAxis
+              dataKey="title"
+              angle={isMobile ? -35 : 0}
+              height={isMobile ? 70 : 30}
+              interval={isMobile ? 0 : "preserveStartEnd"}
+              textAnchor={isMobile ? "end" : "middle"}
+              tick={{ fontSize: isMobile ? 10 : 12 }}
+              tickFormatter={(title) =>
+                isMobile && title.length > 16
+                  ? `${title.slice(0, 16)}...`
+                  : title
+              }
+            />
             <YAxis width="auto" />
             <Tooltip />
             <Bar

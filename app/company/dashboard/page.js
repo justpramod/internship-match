@@ -15,7 +15,7 @@ export default async function Dashboard({ searchParams }) {
       </div>
     );
   return (
-    <div className="px-10 py-4 flex flex-col gap-10">
+    <div className="px-3 md:px-10 py-4 flex flex-col gap-10">
       <TopSection dashboardData={dashboardData} filter={filter} />
       <MostAppliedGraphSection
         internshipData={dashboardData.internshipData}

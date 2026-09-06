@@ -6,7 +6,7 @@ export default function NewApplicantCard({ applicantInfo }) {
   return (
     <div>
       {" "}
-      <div className="flex gap-5 items-start rounded py-4 px-6 justify-between w-full border-b">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-5 items-start rounded py-4  md:px-6 justify-between w-full border-b">
         {" "}
         <div className="flex gap-5 items-start">
           {" "}
@@ -20,13 +20,13 @@ export default function NewApplicantCard({ applicantInfo }) {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2 md:gap-3">
             <div className="flex gap-4 items-center">
               <div className="text-xl font-medium">{applicantInfo.name}</div>
             </div>
-            <div className="flex gap-6 items-center text-gray-500 font-medium">
+            <div className="flex flex-col md:flex-row gap-2 md:gap-6 md:items-center text-gray-500 font-medium">
               <div className="flex gap-1 items-center">
-                <div className="relative w-5 h-5 ">
+                <div className="relative w-5 h-5 shrink-0">
                   <Image
                     src={"/university-logo.svg"}
                     fill
@@ -36,13 +36,13 @@ export default function NewApplicantCard({ applicantInfo }) {
                 {applicantInfo.major || "--"},{" "}
                 {applicantInfo.university || "--"}
               </div>
-              <div className="flex items-center gap-1">
-                {" "}
+              <div className="flex items-center gap-0.5">
                 <div className="relative w-4 h-5 ">
                   <Image src={"/applied-icon.svg"} fill alt="batch-icon" />
                 </div>
                 Batch {applicantInfo.batch_year || "--"}
               </div>
+
               <div className="flex items-center gap-1 text-[#2762ea]">
                 <Link
                   className="flex items-center gap-1"
@@ -66,7 +66,7 @@ export default function NewApplicantCard({ applicantInfo }) {
             </div>
           </div>
         </div>
-        <div>
+        <div className="flex justify-end w-full md:w-auto">
           <Link
             href={`/company/applicant/${applicantInfo._id}`}
             target="_blank"
