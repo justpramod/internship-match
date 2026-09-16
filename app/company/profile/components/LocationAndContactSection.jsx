@@ -83,7 +83,7 @@ export default function LocationAndContactSection({ locationContactData }) {
           handleCancel={handleCancel}
           title="Location & Contact"
         />
-        <div className="grid grid-cols-2 gap-y-4 gap-x-8 justify-between  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 justify-between">
           {fields.map((item, index) => {
             return (
               <div key={index} className="flex flex-col gap-1 ">

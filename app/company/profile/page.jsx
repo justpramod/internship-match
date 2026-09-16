@@ -21,13 +21,14 @@ export default async function CompanyProfile() {
   console.log(logoUrl);
 
   return (
-    <div className="px-10 py-2 ">
+    <div className="px-2 md:px-10 py-2 ">
       <div className="flex justify-end mb-2">
         <LogoutButton />
       </div>
-      <div className="grid grid-cols-[65vw_1fr] gap-6">
+      <div className="grid md:grid-cols-[65vw_1fr] gap-6">
+        <div className="md:hidden"> <LogoSection className="hidden" logoUrl={logoUrl} /></div>
         <BasicInfoSection basicInfoData={basicInfoData} />
-        <LogoSection logoUrl={logoUrl} />
+        <div className="hidden md:block"> <LogoSection className="hidden" logoUrl={logoUrl} /></div>
         <LocationAndContactSection locationContactData={locationContactData} />
         <SocialLinksSeciton socialLinksData={socialLinksData} />
       </div>
