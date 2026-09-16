@@ -14,7 +14,7 @@ export default async function ApplicantPage({ params }) {
   if (!applicantInfo)
     return <div>{response?.error || "Failed getting applicants info."}</div>;
   return (
-    <div className="flex items-center flex-col gap-5 px-20">
+    <div className="flex items-center flex-col gap-5 px-2 md:px-20">
       <InfoSection applicantInfo={applicantInfo} />
       <SkillsSection applicantInfo={applicantInfo} />
       <ResumeSection applicantInfo={applicantInfo} />

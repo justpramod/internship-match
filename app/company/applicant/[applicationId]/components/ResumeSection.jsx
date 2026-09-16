@@ -9,7 +9,7 @@ export default function ResumeSection({ applicantInfo }) {
   return (
     <div className="w-full">
       {" "}
-      <div className="flex w-full gap-5 items-center bg-white rounded py-4 px-6 justify-between ">
+      <div className="flex w-full flex-col sm:flex-row gap-4 items-start sm:items-center bg-white rounded py-4 px-4 md:px-6 justify-between">
         {" "}
         <div
           className="flex gap-2 items-center
@@ -19,7 +19,7 @@ export default function ResumeSection({ applicantInfo }) {
           <div className="relative h-8 w-8 ">
             <Image src="/file-logo.svg" fill alt="file-icon" />
           </div>
-          <p className="font-medium">{fileName}</p>
+          <p className="font-medium break-all">{fileName}</p>
         </div>
         <div>
           <ResumeDownloadButton
@@ -31,7 +31,7 @@ export default function ResumeSection({ applicantInfo }) {
       <div className="w-full flex justify-center my-4">
         {resumeUrl ? (
           <iframe
-            className="w-[50%] h-[110vh]"
+            className="w-full md:w-1/2 h-[80vh] md:h-[110vh]"
             src={`${resumeUrl}#toolbar=0`}
           ></iframe>
         ) : (

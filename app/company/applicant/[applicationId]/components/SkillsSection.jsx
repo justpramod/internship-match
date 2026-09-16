@@ -3,7 +3,7 @@ import SkillsBlock from "./SkillsBlock";
 
 export default function SkillsSection({ applicantInfo }) {
   return (
-    <div className="w-full flex gap-5 justify-between">
+    <div className="w-full flex flex-col md:flex-row gap-5 justify-between">
       {" "}
       <div className=" bg-white rounded py-4 px-6 w-full">
         <div className="flex flex-col gap-3 items-start  h-fit">
