@@ -43,7 +43,7 @@ export default function SummaryInfoSection({ rawData, errorMessageArray }) {
   return (
     <>
       {" "}
-      <div className="flex flex-col gap-4 bg-white rounded-xl px-5 mr-5 py-4 ">
+      <div className="flex flex-col gap-4 bg-white rounded-xl px-2 md:px-5 mr-5 py-4 ">
         <div className="border-b pb-2 border-gray-200">
           <div></div>
           <div className="text-xl font-semibold">Summary Information</div>
@@ -53,14 +53,14 @@ export default function SummaryInfoSection({ rawData, errorMessageArray }) {
             inputInfo={inputInfo.internshipTitle}
             errorInfo={errorInfo}
           />
-          <div className="flex gap-4 ">
+          <div className="flex flex-col md:flex-row gap-4 ">
             <SummaryInfoInputs
               inputInfo={inputInfo.monthlySalary}
               errorInfo={errorInfo}
             />
             <SummaryInfoSelects selectInfo={selectInfo.level} error={error} />
           </div>
-          <div className="flex gap-4 ">
+          <div className="flex flex-col md:flex-row gap-4 ">
             {" "}
             <SummaryInfoSelects
               selectInfo={selectInfo.workModel}
@@ -71,7 +71,7 @@ export default function SummaryInfoSection({ rawData, errorMessageArray }) {
               errorInfo={errorInfo}
             />
           </div>{" "}
-          <div className="flex gap-4 ">
+          <div className="flex flex-col md:flex-row gap-4 ">
             {" "}
             <SummaryInfoInputs
               inputInfo={inputInfo.openings}

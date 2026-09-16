@@ -17,7 +17,7 @@ export default function SectorSection({ allSectors, error }) {
     <div className="flex flex-col gap-1 ">
       <div className="text-[1.1rem] font-semibold">Sector</div>
       <div
-        className={`flex justify-between gap-2 border py-1 pl-2 pr-5 ${error.get("sectorId") && !selectedSector?.name && "border-red-400 focus:outline-none"}`}
+        className={`flex justify-between gap-2 border px-2 py-1 md:pl-2 md:pr-5 ${error.get("sectorId") && !selectedSector?.name && "border-red-400 focus:outline-none"}`}
       >
         <input type="hidden" name="sectorId" value={selectedSector._id} />
         <div className="flex items-center">

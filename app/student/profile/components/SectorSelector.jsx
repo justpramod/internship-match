@@ -26,7 +26,7 @@ export default function SectorSelector({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="shadow-xs h-10 bg-[#f5f6fc] rounded px-2 py-1 max-w-fit cursor-pointer "
+          className="shadow-xs  h-fit bg-[#f5f6fc] rounded px-2 py-1 max-w-fit cursor-pointer "
         >
           {choose ? "Select Sector" : "+ Add Sector"}
         </button>

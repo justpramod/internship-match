@@ -6,7 +6,7 @@ import InternshipForm from "./components/InternshipForm";
 export default async function NewInternship() {
   const allSectors = await getAllSectors();
   return (
-    <div className="felx justify-center px-10 py-4">
+    <div className="felx justify-center px-2 md:px-10 py-4">
       <div className="flex flex-col gap-5">
         {" "}
         <div className="flex flex-col gap-2">

@@ -27,14 +27,14 @@ export default function SkillsSection({ error }) {
     <div className="flex flex-col gap-1 ">
       <div className="text-[1.1rem] font-semibold">Skills</div>
       <div
-        className={`flex justify-between gap-2 border py-1 pl-2 pr-5 ${error.get("requiredSkills") && checkSkillsLength() && "border-red-400 focus:outline-none"}`}
+        className={`flex justify-between md:gap-2 border py-1 px-2 md:pl-2 md:pr-5 ${error.get("requiredSkills") && checkSkillsLength() && "border-red-400 focus:outline-none"}`}
       >
         <input
           type="hidden"
           name="requiredSkills"
           value={JSON.stringify(skills)}
         />
-        <div className="flex items-center">
+        <div className="flex flex-wrap items-center">
           {" "}
           {skills.length === 0 ? (
             <div className="text-gray-400 ">

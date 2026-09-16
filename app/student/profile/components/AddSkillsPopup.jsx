@@ -26,7 +26,7 @@ export function AddSkillsPopup({ handleAddSkill, currentSkills }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
-        <div className="flex items-center h-10 bg-[#f5f6fc] rounded px-2 py-1 max-w-fit">
+        <div className="flex items-center h-fit bg-[#f5f6fc] rounded px-2 py-1 max-w-fit">
           + Add Skill
         </div>
       </DialogTrigger>
