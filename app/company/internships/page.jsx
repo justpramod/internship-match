@@ -8,7 +8,7 @@ export default async function Internships() {
 
   if (releasedInternships.error) return <div>error</div>;
   return (
-    <div className="felx justify-center px-10 py-4">
+    <div className="felx justify-center px-2 md:px-10 py-4">
       <div className="flex flex-col gap-5">
         {" "}
         <div className="flex justify-start">
@@ -28,7 +28,7 @@ export default async function Internships() {
           </div>{" "}
         </div>
         <div>
-          <div className="flex flex-col  items-left bg-white py-6 px-6 rounded gap-9">
+          <div className="flex flex-col  items-left bg-white py-6 px-2 md:px-6 rounded gap-9">
             <div className="font-medium text-2xl">Released Internships</div>
             <div className="flex flex-col gap-6">
               {releasedInternships.map((internshipInfo, index) => {

@@ -8,11 +8,11 @@ export default function ReleasedIternshipCard({ internshipInfo }) {
     internshipInfo.totalApplications -
     (internshipInfo.acceptedCount + internshipInfo.rejectedCount);
   return (
-    <div className="border-b flex flex-col gap-3 pr-2">
+    <div className="border-b flex flex-col gap-3 md:pr-2">
       <div className="flex justify-between">
         <div className="text-xl font-medium">{internshipInfo.title}</div>
         <div
-          className={`${internshipInfo.isClosed ? "bg-gray-200 opacity-80" : "bg-[#d1fae5]"} px-2 rounded-xl py-1`}
+          className={`${internshipInfo.isClosed ? "bg-gray-200 opacity-80" : "bg-[#d1fae5]"} px-2 rounded-xl py-1 h-fit`}
         >
           {internshipInfo.isClosed ? "Closed" : "Open"}
         </div>
@@ -32,11 +32,11 @@ export default function ReleasedIternshipCard({ internshipInfo }) {
           Posted {getTimeAgo(internshipInfo.createdAt)}
         </div>
       </div>
-      <div className="flex gap-3">
+      <div className="flex flex-wrap  gap-3">
         {internshipInfo.required_skills?.map(mapSkills)}
       </div>
       <div className="border-t border-gray-100  flex justify-between py-7 items-center">
-        <div className="flex gap-5 ">
+        <div className="flex flex-col md:flex-row gap-5 ">
           <div className="flex flex-col ">
             <div className="font-semibold text-xl">
               {internshipInfo.totalApplications}
