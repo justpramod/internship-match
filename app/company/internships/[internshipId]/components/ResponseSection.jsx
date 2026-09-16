@@ -22,9 +22,9 @@ export default function ResponseSection({ applicantInfo, noRedirect }) {
   const errorInfo = { error, setError };
   const pendingInfo = { isPending, setIsPending };
   return (
-    <div className="flex gap-4">
+    <div className="flex w-full md:w-auto items-center justify-end gap-3 md:gap-4">
       {applicantInfo.status === "pending" ? (
-        <div className="flex gap-6">
+        <div className="flex gap-3 md:gap-6">
           <ConfirmPopup
             value={"Reject"}
             applicantName={applicantInfo.name}

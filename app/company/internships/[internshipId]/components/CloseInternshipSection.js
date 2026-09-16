@@ -7,7 +7,7 @@ export default function CloseInternshipSection({ internshipId }) {
         <p className="text-xl font-medium">Close Internship</p>
         <div className="flex flex-col gap-2">
           {" "}
-          <div className="flex justify-between items-center ">
+          <div className="flex justify-between md:gap-2 items-center ">
             <p> Close to new applicants</p>
             <CloseInternshipPopup internshipId={internshipId} />
           </div>
