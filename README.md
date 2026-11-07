@@ -1,4 +1,4 @@
-# InternKaji
+# InternMatch
 
 An AI-assisted internship matching platform that connects students, companies, and administrators in one role-based web application. Students can build profiles, upload resumes, and discover relevant internships. Companies can publish opportunities, review applicants, and manage postings. Administrators can moderate sectors, companies, and students from a dedicated dashboard.
 
@@ -107,5 +107,4 @@ These accounts are included for evaluation and testing.
 
 ## Live Deployment
 
-Live URL: https://internkaji.vercel.app
-
+Live URL: https://internmatch.vercel.app
