@@ -2,22 +2,29 @@ import Link from "next/link";
 import RegisterForm from "./RegisterForm";
 
 export default function RegisterComp({ role }) {
+  const isStudent = role === "student";
   return (
-    <div className="flex h-[80vh] justify-center items-center align-middle ">
-      <div className=" p-4 rounded-xl text-center bg-white sm:w-[30vw] sm:h-[70vh]">
-        <div className="text-3xl font-semibold">Create an Account</div>
-        <div className="text-left mt-6 pl-5">
+    <div className="flex min-h-[calc(100vh-80px)] items-center justify-center px-4 py-5">
+      <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/5 sm:p-6">
+        <div className="text-center">
+          <div className="text-2xl font-semibold tracking-tight text-slate-950">
+            Create your account
+          </div>
+          <p className="mt-1 text-xs text-slate-500">
+            {isStudent
+              ? "Build your profile and find internships that fit."
+              : "Find strong student talent for your next opportunity."}
+          </p>
+        </div>
+        <div className="mt-5">
           <RegisterForm role={role} />
         </div>
-        <div>
-          <p className=" mt-4">
+        <div className="mt-5 border-t border-slate-100 pt-4 text-center">
+          <p className="text-sm text-slate-500">
             Already have an account?{" "}
-            <span className="text-blue-700 block">
-              {" "}
-              <Link className="underline" href={"/login"}>
-                Login here
-              </Link>{" "}
-            </span>
+            <Link className="font-semibold text-teal-700 hover:text-teal-800 hover:underline" href="/login">
+              Sign in
+            </Link>
           </p>
         </div>
       </div>

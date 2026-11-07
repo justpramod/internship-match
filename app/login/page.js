@@ -5,25 +5,28 @@ import checkUserAndRedirect from "@/lib/utils/checkUserAndRedirect";
 export default async function Login() {
   await checkUserAndRedirect();
   return (
-    <div className="flex h-[70vh] justify-center items-center align-middle ">
-      <div className=" p-4 rounded-xl text-center bg-white sm:w-[30vw] sm:h-[50vh]">
-        <div className="text-3xl font-semibold">Welcome Back</div>
-        <div className="text-left mt-6 pl-5">
+    <div className="flex min-h-[calc(100vh-80px)] items-center justify-center px-4 py-8">
+      <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-7">
+        <div className="mb-1 text-center text-2xl font-semibold tracking-tight text-slate-950">
+          Welcome back
+        </div>
+        <p className="mb-6 text-center text-sm text-slate-500">
+          Sign in to continue your internship journey.
+        </p>
+        <div className="text-left">
           <LoginForm />
         </div>
-        <div>
-          <p className=" mt-4">
-            Don&apos;t have an account? Register as
-            <span className="text-blue-700 block">
-              {" "}
-              <Link className="underline" href={"/register/student"}>
-                Student
-              </Link>{" "}
-              <span> / </span>
-              <Link className="underline" href={"/register/company"}>
-                Company
-              </Link>
-            </span>
+        <div className="mt-6 border-t border-slate-100 pt-4 text-center">
+          <p className="text-sm text-slate-500">
+            Don&apos;t have an account?{" "}
+            <span className="font-medium text-slate-700">Register as</span>{" "}
+            <Link className="font-semibold text-teal-700 hover:text-teal-800 hover:underline" href="/register/student">
+              student
+            </Link>
+            <span className="px-1 text-slate-300">or</span>
+            <Link className="font-semibold text-teal-700 hover:text-teal-800 hover:underline" href="/register/company">
+              company
+            </Link>
           </p>
         </div>
       </div>
