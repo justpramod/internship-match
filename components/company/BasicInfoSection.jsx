@@ -39,7 +39,7 @@ export default function BasicInfoSection({ companyDetails }) {
       <div className="flex gap-8 items-center">
         <div>
           <p className="text-gray-500">Website</p>
-          <div className="text-blue-600 break-all text-wrap flex items-center gap-1">
+          <div className="text-green-600 break-all text-wrap flex items-center gap-1">
             <Image
               src="/globe.svg"
               alt="website_icon"
@@ -48,7 +48,7 @@ export default function BasicInfoSection({ companyDetails }) {
             />
             <a href={formatUrl(companyDetails.website)} target="_blank" rel="noopener noreferrer"
               className="hover:underline"
-              style={{ color: "#3b82f6", }}
+              style={{ color: "#16a34a", }}
             >
               {companyDetails.website || "--"}
             </a>

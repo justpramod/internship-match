@@ -47,7 +47,7 @@ export function AddSkillsPopup({ handleAddSkill, currentSkills }) {
             />
             <button
               type="button"
-              className="rounded-2xl bg-[#2762ea] text-white py-2 px-3"
+              className="rounded-2xl bg-[#15803d] text-white py-2 px-3"
               onClick={handleAdd}
             >
               Add

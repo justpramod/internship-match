@@ -24,7 +24,7 @@ export default function AddNewSectorSection() {
         <p>Sector Name</p>
         <form className="flex gap-6 items-center" action={formAction}>
           <input ref={inputRef} className="border-2 px-2 py-1 flex-1 min-w-0 rounded" name="sector" />
-          <button type="submit" className="bg-[#2762ea] text-white py-2 px-3 rounded cursor-pointer flex items-center justify-center  ">
+          <button type="submit" className="bg-[#15803d] text-white py-2 px-3 rounded cursor-pointer flex items-center justify-center  ">
             <LoadingButton
               isPending={isPending}
               initialValue="Add Sector"

@@ -20,7 +20,7 @@ export default async function Internships() {
             <div>
               <Link href="internships/new">
                 {" "}
-                <button className="bg-[#2762ea] text-white py-2 px-8 rounded hover:opacity-80 active:opacity-60   cursor-pointer">
+                <button className="bg-[#15803d] text-white py-2 px-8 rounded hover:opacity-80 active:opacity-60   cursor-pointer">
                   Post Internship
                 </button>
               </Link>

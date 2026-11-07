@@ -22,7 +22,7 @@ export default function RegisterComp({ role }) {
         <div className="mt-5 border-t border-slate-100 pt-4 text-center">
           <p className="text-sm text-slate-500">
             Already have an account?{" "}
-            <Link className="font-semibold text-teal-700 hover:text-teal-800 hover:underline" href="/login">
+            <Link className="font-semibold text-green-700 hover:text-green-800 hover:underline" href="/login">
               Sign in
             </Link>
           </p>

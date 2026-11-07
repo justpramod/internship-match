@@ -55,7 +55,7 @@ export default function FilterSection({ search }) {
         <p className="text-xl font-medium">Filters</p>
         <p
           className=" cursor-pointer hover:underline"
-          style={{ color: "#2762ea" }}
+          style={{ color: "#15803d" }}
           onClick={handleClearAll}
         >
           Clear All

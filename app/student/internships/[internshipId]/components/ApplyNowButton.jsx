@@ -33,7 +33,7 @@ export default function ApplyNowButton({
     <>
       <button
         onClick={handleApply}
-        className={`${blockApply ? "bg-gray-400 cursor-not-allowed " : "bg-[#2762ea] cursor-pointer hover:opacity-70 active:opacity-50"} text-white py-2 px-6 rounded flex  items-center w-full justify-center  `}
+        className={`${blockApply ? "bg-gray-400 cursor-not-allowed " : "bg-[#15803d] cursor-pointer hover:opacity-70 active:opacity-50"} text-white py-2 px-6 rounded flex  items-center w-full justify-center  `}
         disabled={blockApply}
       >
         <div className="w-8 h-5 relative">

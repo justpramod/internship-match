@@ -34,7 +34,7 @@ export default function InternshipsTable({ internships }) {
 
                 </td>
                 <td className=" px-3 py-6">
-                  <Link href={`/admin/companies/${internship.company_id}`} className="flex items-center gap-1 text-blue-500 hover:underline cursor-pointer">
+                  <Link href={`/admin/companies/${internship.company_id}`} className="flex items-center gap-1 text-green-500 hover:underline cursor-pointer">
                     {internship.company_name}
                   </Link>
                 </td>

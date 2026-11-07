@@ -20,11 +20,11 @@ export default async function Login() {
           <p className="text-sm text-slate-500">
             Don&apos;t have an account?{" "}
             <span className="font-medium text-slate-700">Register as</span>{" "}
-            <Link className="font-semibold text-teal-700 hover:text-teal-800 hover:underline" href="/register/student">
+            <Link className="font-semibold text-green-700 hover:text-green-800 hover:underline" href="/register/student">
               student
             </Link>
             <span className="px-1 text-slate-300">or</span>
-            <Link className="font-semibold text-teal-700 hover:text-teal-800 hover:underline" href="/register/company">
+            <Link className="font-semibold text-green-700 hover:text-green-800 hover:underline" href="/register/company">
               company
             </Link>
           </p>

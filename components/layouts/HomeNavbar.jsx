@@ -33,7 +33,7 @@ export default function HomeNavbar() {
         <div className="hidden items-center gap-9 md:flex">
           <div className="flex items-center">
             <Link className="contents" href="/login">
-              <div className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-white hover:text-teal-700 active:opacity-60">
+              <div className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-white hover:text-green-700 active:opacity-60">
                 Login
               </div>
             </Link>
@@ -41,7 +41,7 @@ export default function HomeNavbar() {
 
           <div className="flex items-center">
             <Link className="contents" href="/register/student">
-              <div className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-white hover:text-teal-700 active:opacity-60">
+              <div className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-white hover:text-green-700 active:opacity-60">
                 Register as student
               </div>
             </Link>
@@ -49,7 +49,7 @@ export default function HomeNavbar() {
 
           <div className="flex items-center">
             <Link className="contents" href="/register/company">
-              <div className="flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800 active:opacity-60">
+              <div className="flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-green-800 active:opacity-60">
                 Register as company
               </div>
             </Link>

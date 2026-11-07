@@ -18,7 +18,7 @@ export default function SuccessPopup({ open, setOpen }) {
           <p className="font-medium text-gray-500">Internship was deleted successfully.</p>
           <button
             onClick={() => setOpen(false)}
-            className="px-6 bg-[#2762ea] py-2 rounded text-white cursor-pointer hover:opacity-70 active:opacity-50"
+            className="px-6 bg-[#15803d] py-2 rounded text-white cursor-pointer hover:opacity-70 active:opacity-50"
           >
             Ok
           </button>

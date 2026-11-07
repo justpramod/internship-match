@@ -90,7 +90,7 @@ export default function ResumeUploadPopup({ open, setOpen }) {
 
             <div
               className={`flex flex-col px-4 ${
-                isDragging ? "border-blue-500 bg-blue-50" : "border-gray-300"
+                isDragging ? "border-green-500 bg-green-50" : "border-gray-300"
               } items-center border-2 border-dotted py-18 gap-1 cursor-pointer ${!file && "hover:opacity-80 active:opacity-60"} select-none`}
               onClick={handleClick}
               onDragOver={(e) => {
@@ -164,7 +164,7 @@ export default function ResumeUploadPopup({ open, setOpen }) {
             {file && !uploadSuccess && (
               <div className="flex justify-end pr-4 select-none">
                 <button
-                  className=" bg-[#2762ea] text-white px-2 py-1 rounded"
+                  className=" bg-[#15803d] text-white px-2 py-1 rounded"
                   type="submit"
                 >
                   <LoadingButton

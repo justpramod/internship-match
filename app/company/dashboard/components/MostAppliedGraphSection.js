@@ -71,7 +71,7 @@ export default function MostAppliedGraphSection({ internshipData, filter }) {
             <Tooltip />
             <Bar
               dataKey="total_applications_count"
-              fill="#2762ea"
+              fill="#15803d"
               radius={[10, 10, 0, 0]}
               name={"Total Applications"}
               barSize={60}

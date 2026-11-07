@@ -96,7 +96,7 @@ function getTriggerBackgroundColor(action) {
     case "Unblacklist":
       return "#ffffff";
     case "Approve":
-      return "#2762ea";
+      return "#15803d";
     case "Reject":
       return "#fff0f0";
     default:

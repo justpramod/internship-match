@@ -25,7 +25,7 @@ export default function RegisterForm({ role }) {
           {role === "student" ? "Full name" : "Company name"}
         </label>
         <input
-          className={`h-9 w-full rounded-lg border bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-teal-600 focus:ring-4 focus:ring-teal-600/10 ${error?.path === "name" ? "border-red-500 focus:border-red-500 focus:ring-red-500/10" : "border-slate-300"}`}
+          className={`h-9 w-full rounded-lg border bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-green-600 focus:ring-4 focus:ring-green-600/10 ${error?.path === "name" ? "border-red-500 focus:border-red-500 focus:ring-red-500/10" : "border-slate-300"}`}
           id="name"
           name="name"
           autoComplete="name"
@@ -41,7 +41,7 @@ export default function RegisterForm({ role }) {
           Email address
         </label>
         <input
-          className={`h-9 w-full rounded-lg border bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-teal-600 focus:ring-4 focus:ring-teal-600/10 ${error?.path === "email" ? "border-red-500 focus:border-red-500 focus:ring-red-500/10" : "border-slate-300"}`}
+          className={`h-9 w-full rounded-lg border bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-green-600 focus:ring-4 focus:ring-green-600/10 ${error?.path === "email" ? "border-red-500 focus:border-red-500 focus:ring-red-500/10" : "border-slate-300"}`}
           id="email"
           name="email"
           type="email"
@@ -58,7 +58,7 @@ export default function RegisterForm({ role }) {
           Password
         </label>
         <input
-          className={`h-9 w-full rounded-lg border bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-teal-600 focus:ring-4 focus:ring-teal-600/10 ${error?.path === "password" ? "border-red-500 focus:border-red-500 focus:ring-red-500/10" : "border-slate-300"}`}
+          className={`h-9 w-full rounded-lg border bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-green-600 focus:ring-4 focus:ring-green-600/10 ${error?.path === "password" ? "border-red-500 focus:border-red-500 focus:ring-red-500/10" : "border-slate-300"}`}
           type="password"
           id="password"
           name="password"
@@ -73,7 +73,7 @@ export default function RegisterForm({ role }) {
           Confirm password
         </label>
         <input
-          className="h-9 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-teal-600 focus:ring-4 focus:ring-teal-600/10"
+          className="h-9 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-green-600 focus:ring-4 focus:ring-green-600/10"
           type="password"
           id="cpassword"
           name="cpassword"
@@ -90,7 +90,7 @@ export default function RegisterForm({ role }) {
         </div>
         <button
           type="submit"
-          className="h-10 w-full rounded-lg bg-teal-700 px-4 py-2 font-semibold text-white shadow-sm transition hover:bg-teal-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-600/20 disabled:cursor-not-allowed disabled:opacity-60"
+          className="h-10 w-full rounded-lg bg-green-700 px-4 py-2 font-semibold text-white shadow-sm transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-600/20 disabled:cursor-not-allowed disabled:opacity-60"
           disabled={pending}
         >
           {pending ? "Creating account..." : "Create account"}

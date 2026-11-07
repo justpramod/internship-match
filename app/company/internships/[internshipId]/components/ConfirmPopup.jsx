@@ -31,7 +31,7 @@ export default function ConfirmPopup({
       {" "}
       <DialogTrigger>
         <div
-          className={`flex items-center hover:opacity-70 active:opacity-50 transition-all duration-100 ease-in-out h-10 ${value === "Shortlist" ? "bg-[#2762ea] text-white" : " bg-[#f5f6fc] border"} cursor-pointer rounded px-6 py-1 max-w-fit`}
+          className={`flex items-center hover:opacity-70 active:opacity-50 transition-all duration-100 ease-in-out h-10 ${value === "Shortlist" ? "bg-[#15803d] text-white" : " bg-[#f5f6fc] border"} cursor-pointer rounded px-6 py-1 max-w-fit`}
         >
           {value}
         </div>

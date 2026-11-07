@@ -13,7 +13,7 @@ export default function ResumeDownloadButton({ resumeUrl, fileName }) {
     <>
       {resumeUrl && (
         <button
-          className="bg-[#2762ea] text-white py-2 px-6 rounded cursor-pointer hover:opacity-80 active:opacity-60"
+          className="bg-[#15803d] text-white py-2 px-6 rounded cursor-pointer hover:opacity-80 active:opacity-60"
           onClick={handleDownlaod}
         >
           Download

@@ -90,7 +90,7 @@ export default function CompanyTable({ companyList }) {
                         />
                       </div>
 
-                      <Link href={`/admin/companies/${companyId}`} className="text-blue-500 hover:underline">
+                      <Link href={`/admin/companies/${companyId}`} className="text-green-500 hover:underline">
                         {company.name}
                       </Link>
                     </div>

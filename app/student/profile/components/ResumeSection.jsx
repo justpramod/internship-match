@@ -43,7 +43,7 @@ export default function ResumeSection({ studentResumeDetails }) {
                 resumeName={studentResumeDetails.file_name}
               />{" "}
             </div>
-            <div className=" bg-[#2762ea] text-white px-2 py-1 rounded">
+            <div className=" bg-[#15803d] text-white px-2 py-1 rounded">
               <button
                 onClick={() => {
                   setUploadPopup(true);

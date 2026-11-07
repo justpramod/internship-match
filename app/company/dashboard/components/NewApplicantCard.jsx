@@ -43,7 +43,7 @@ export default function NewApplicantCard({ applicantInfo }) {
                 Batch {applicantInfo.batch_year || "--"}
               </div>
 
-              <div className="flex items-center gap-1 text-[#2762ea]">
+              <div className="flex items-center gap-1 text-[#15803d]">
                 <Link
                   className="flex items-center gap-1"
                   href={`/company/internships/${applicantInfo.internship_id}`}

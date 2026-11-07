@@ -18,7 +18,7 @@ export default async function FilterBar({ filter, search }) {
         <Link
           key={item.name}
           href={item.href}
-          className={`text-gray-700   hover:underline ${item.name.toLowerCase() === filter ? 'font-medium text-blue-500' : 'text-gray-600'} transition-all ease-in-out duration-200`}
+          className={`text-gray-700   hover:underline ${item.name.toLowerCase() === filter ? 'font-medium text-green-500' : 'text-gray-600'} transition-all ease-in-out duration-200`}
         >
           {item.name}
         </Link>

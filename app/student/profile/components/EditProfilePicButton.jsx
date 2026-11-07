@@ -138,7 +138,7 @@ export default function EditProfilePicButton({ profilePicSrc, companyLogo }) {
                   Upload new profile picture.{" "}
                 </div>{" "}
                 <div
-                  className={`flex flex-col ${isDragging ? "border-blue-500 bg-blue-50" : "border-gray-300"}  select-none py-2 items-center border-2 ${!image && "hover:opacity-80 active:opacity-60 h-[40vh]"}  border-dotted gap-1 cursor-pointer `}
+                  className={`flex flex-col ${isDragging ? "border-green-500 bg-green-50" : "border-gray-300"}  select-none py-2 items-center border-2 ${!image && "hover:opacity-80 active:opacity-60 h-[40vh]"}  border-dotted gap-1 cursor-pointer `}
                   onClick={handleClick}
                   onDragOver={(e) => {
                     e.preventDefault();
@@ -203,7 +203,7 @@ export default function EditProfilePicButton({ profilePicSrc, companyLogo }) {
                     Cancel
                   </button>
                   <button
-                    className={` px-2 py-1 rounded select-none ${image ? "bg-[#2762ea]  hover:opacity-80 active:opacity-60 cursor-pointer text-white  " : "cursor-not-allowed bg-gray-100 "} `}
+                    className={` px-2 py-1 rounded select-none ${image ? "bg-[#15803d]  hover:opacity-80 active:opacity-60 cursor-pointer text-white  " : "cursor-not-allowed bg-gray-100 "} `}
                     type="submit"
                     disabled={isPending || !image}
                   >
@@ -250,7 +250,7 @@ export default function EditProfilePicButton({ profilePicSrc, companyLogo }) {
                   />
                 </div>
                 <div
-                  className=" bg-[#2762ea] text-white px-2 py-1 rounded select-none hover:opacity-80 active:opacity-60 cursor-pointer"
+                  className=" bg-[#15803d] text-white px-2 py-1 rounded select-none hover:opacity-80 active:opacity-60 cursor-pointer"
                   onClick={() => {
                     setuploadArea(true);
                   }}

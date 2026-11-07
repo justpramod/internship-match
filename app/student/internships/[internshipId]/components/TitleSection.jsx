@@ -21,7 +21,7 @@ export default function TitleSection({ internshipData, isAdmin }) {
         </div>
         <div className="flex flex-col gap-1">
           <div className="text-2xl font-semibold">{internshipData?.title}</div>
-          <div className="text-[#2762ea] font-medium text-[1.2rem] ">
+          <div className="text-[#15803d] font-medium text-[1.2rem] ">
             {internshipData?.company_name}
           </div>
         </div>

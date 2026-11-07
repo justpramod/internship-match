@@ -15,7 +15,7 @@ export default function ApplicationStatusGraphSection({
   if (filterMap.has(filter)) filterMessage = filterMap.get(filter);
 
   const colorsMap = new Map([
-    ["Applied", "#2762ea"],
+    ["Applied", "#15803d"],
     ["Pending", "#ff6700"],
     ["Shortlisted", "#23b057"],
     ["Rejected", "#f92c37"],
@@ -75,7 +75,7 @@ export default function ApplicationStatusGraphSection({
             >
               {" "}
               {applicationData.map((data, index) => {
-                const color = colorsMap.get(data?.name) || "#2762ea";
+                const color = colorsMap.get(data?.name) || "#15803d";
                 return <Cell key={index} fill={color} />;
               })}
               <LabelList dataKey="value" position="top" offset={7} />

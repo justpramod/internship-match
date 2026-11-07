@@ -27,7 +27,7 @@ export default function StudentsTable({ students }) {
               return (
                 <tr key={index}>
                   <td className="px-3 py-6">
-                    <Link href={`/admin/students/${student._id}`} className="flex text-blue-500 items-center gap-1 hover:underline cursor-pointer">
+                    <Link href={`/admin/students/${student._id}`} className="flex text-green-500 items-center gap-1 hover:underline cursor-pointer">
                       {student.name}
                     </Link>
 

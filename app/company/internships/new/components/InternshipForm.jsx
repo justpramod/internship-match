@@ -53,7 +53,7 @@ export default function InternshipForm({ allSectors }) {
         <button
           disabled={isPending}
           type="submit"
-          className="bg-[#2762ea] text-white py-2 px-6 rounded cursor-pointer"
+          className="bg-[#15803d] text-white py-2 px-6 rounded cursor-pointer"
         >
           <LoadingButton
             initialValue="Post Internship"

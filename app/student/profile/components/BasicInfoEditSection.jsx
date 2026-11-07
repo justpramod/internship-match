@@ -39,7 +39,7 @@ export default function BasicInfoEditSection({
           <button
             type="submit"
             disabled={isPending}
-            className="bg-[#2762ea] h-10 text-white px-2 py-1 flext justify-center min-w-30 rounded flex items-center gap-2 disabled:opacity-70  cursor-pointer"
+            className="bg-[#15803d] h-10 text-white px-2 py-1 flext justify-center min-w-30 rounded flex items-center gap-2 disabled:opacity-70  cursor-pointer"
           >
             <LoadingButton
               initialValue="Save"

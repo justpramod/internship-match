@@ -48,7 +48,7 @@ export default function SearchBar({ placeholder }) {
           />
           <button
             type="submit"
-            className="rounded-xl bg-teal-700 px-6 py-2.5 font-semibold text-white shadow-sm transition hover:bg-teal-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
+            className="rounded-xl bg-green-700 px-6 py-2.5 font-semibold text-white shadow-sm transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
           >
             Search
           </button>
