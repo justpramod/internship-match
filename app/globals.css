@@ -1,8 +1,8 @@
-@config "../tailwind.config.js";
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* stylelint-disable-next-line at-rule-no-unknown */
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -74,6 +74,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* stylelint-disable-next-line at-rule-no-unknown */
 @theme inline {
   --font-sans: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);

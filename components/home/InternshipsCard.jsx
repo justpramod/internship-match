@@ -19,7 +19,7 @@ export default function InternshipsCard({ internshipInfo }) {
   }
 
   return (
-    <div className="flex items-center justify-between rounded-xl border border-slate-200/80 bg-white px-3 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-green-200 hover:shadow-md md:items-start md:pl-4 md:pr-8">
+    <div className="flex items-center justify-between rounded-b-2xl border-b-2 border-slate-200 bg-white px-3 py-4 transition hover:border-green-200 md:items-start md:pl-4 md:pr-8">
       <div className="flex justify-start gap-2 md:gap-4">
         {" "}
         <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-gray-100 flex-shrink-0 select-none flex items-center justify-center overflow-hidden">
