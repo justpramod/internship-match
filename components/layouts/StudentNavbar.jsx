@@ -15,15 +15,17 @@ export default function StudentNavbar() {
     <nav className="sticky top-0 z-10 bg-[#f5f6fc] transition-all-300">
       {" "}
       <div className="flex justify-between py-5 px-4 md:px-8 select-none sticky items-center">
-        <Link href="/student/home" className="contents">
+        <Link href="/student/home" className="shrink-0">
           {" "}
-          <div className="relative aspect-[343/83] w-44 md:w-54">
+          <div className="w-[172px] md:w-[205px]">
             <Image
-              src="/InternKaji.webp"
+              src="/internMatch-logo.png"
               alt="logo"
               loading="eager"
-              fill
-              sizes="(min-width: 6vw) 33vw"
+              width={1200}
+              height={300}
+              className="h-auto w-full object-contain"
+              sizes="(max-width: 768px) 172px, 205px"
             />
           </div>
         </Link>

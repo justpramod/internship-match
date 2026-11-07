@@ -11,14 +11,15 @@ export default function AdminNavbar() {
           className="flex gap-1 items-center select-none"
         >
           {" "}
-          <div className="relative w-44 h-11">
+          <div className="w-[172px] shrink-0">
             <Image
-              src="/InternKaji.webp"
+              src="/internMatch-logo.png"
               alt="logo"
               loading="eager"
-              fill
-              sizes="(min-width: 6 vw) 33vw"
-              className="object-cover"
+              width={1200}
+              height={300}
+              className="h-auto w-full object-contain"
+              sizes="172px"
             />
           </div>
           <div className="text-[1.6rem] text-gray-800 font-semibold">Admin</div>
