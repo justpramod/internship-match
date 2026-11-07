@@ -30,7 +30,7 @@ export default function SearchBar({ placeholder }) {
   return (
     <div className="w-full">
       {" "}
-      <div className="shadow-xs rounded-2xl bg-white">
+      <div className="rounded-2xl border border-slate-200 bg-white p-1.5 shadow-lg shadow-slate-900/5">
         {" "}
         <form
           className="flex justify-between gap-4 px-2 py-1"
@@ -39,7 +39,7 @@ export default function SearchBar({ placeholder }) {
           {" "}
           <input
             ref={inputRef}
-            className="w-full focus:outline-none focus:ring-0"
+            className="w-full bg-transparent px-2 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-0"
             placeholder={`${placeholder}`}
             value={inputValue}
             onChange={(e) => {
@@ -48,7 +48,7 @@ export default function SearchBar({ placeholder }) {
           />
           <button
             type="submit"
-            className="bg-[#2762ea] text-white py-2 px-6 rounded-2xl"
+            className="rounded-xl bg-teal-700 px-6 py-2.5 font-semibold text-white shadow-sm transition hover:bg-teal-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
           >
             Search
           </button>

@@ -19,7 +19,7 @@ export default function InternshipsCard({ internshipInfo }) {
   }
 
   return (
-    <div className="flex items-center md:items-start justify-between border-b-2 border-gray-200 pt-4 pb-8 pr-2 md:pl-4 md:pr-8 bg-white rounded-xl">
+    <div className="flex items-center justify-between rounded-xl border border-slate-200/80 bg-white px-3 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-md md:items-start md:pl-4 md:pr-8">
       <div className="flex justify-start gap-2 md:gap-4">
         {" "}
         <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-gray-100 flex-shrink-0 select-none flex items-center justify-center overflow-hidden">
@@ -32,8 +32,8 @@ export default function InternshipsCard({ internshipInfo }) {
           />
         </div>
         <div className="flex flex-col gap-5">
-          <div className="text-xl ">{internshipInfo.title}</div>
-          <div className="grid md:flex md:gap-4 gap-1.5 text-gray-600 select-none">
+          <div className="text-lg font-semibold text-slate-900 md:text-xl">{internshipInfo.title}</div>
+          <div className="grid gap-1.5 text-sm text-slate-500 select-none md:flex md:gap-4">
             <div className="flex gap-1">
               <div className="relative h-4 w-4 top-1">
                 {" "}
@@ -72,7 +72,7 @@ export default function InternshipsCard({ internshipInfo }) {
           </div>
           <div className="flex-wrap flex gap-1 md:gap-3 items-center">
             {internshipInfo.matchedSkills && (
-              <div className="text-gray-600">Matched skills:</div>
+              <div className="text-sm font-medium text-slate-500">Matched skills:</div>
             )}
             {internshipInfo.matchedSkills
               ? internshipInfo.matchedSkills.map(mapSkills)
