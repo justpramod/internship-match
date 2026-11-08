@@ -15,23 +15,23 @@ export default async function InternshipsBlock({ search }) {
   return (
     <div className="flex justify-center">
       {" "}
-      <div className="w-[95vw] max-w-6xl rounded-2xl border border-slate-200/80 bg-white/90 py-7 pl-4 shadow-xl shadow-slate-900/5 backdrop-blur-sm md:w-[80vw] md:pl-7">
+      <div className="w-[95vw] rounded bg-white py-6 pl-4 shadow-md md:w-[80vw] md:pl-6">
         {search ? (
           <div className="flex gap-1.5 md:gap-3">
             <BackButton />
-            <div className="text-lg font-semibold text-slate-950 md:text-2xl">
+            <div className="font-medium text-slate-950 md:text-2xl">
               Showing results for &quot;{search}&quot;
             </div>
           </div>
         ) : (
           <div>
-            <div className="text-2xl font-semibold tracking-tight text-slate-950">
+            <div className="text-2xl font-medium text-slate-950">
               {studentLoggedIn
                 ? "Suggested Internships"
                 : "Featured Internships"}
             </div>
             <div>
-              <p className="ml-3 mt-1 text-sm text-slate-500">
+              <p className="ml-3 text-slate-500">
                 {studentLoggedIn
                   ? "Opportunities that match your sectors in your profile."
                   : "Opportunities from various companies across different sectors."}

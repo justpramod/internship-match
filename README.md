@@ -17,7 +17,7 @@ An AI-assisted internship matching platform that connects students, companies, a
 - State and forms: Server Actions, Zod, cmdk, React Datepicker
 - Authentication: NextAuth v5 with credentials-based login
 - Database: MongoDB with Mongoose
-- Storage: Cloudflare R2 with AWS SDK integrations
+- Storage: Local filesystem uploads under `attachments/` (ready to migrate to object storage later)
 - AI / Parsing: Google GenAI, PDF parsing utilities, custom skill extraction helpers
 - Visualization: Recharts
 - Utilities: bcrypt, sharp, pdfjs-dist, pdf2json, unpdf
@@ -48,7 +48,6 @@ An AI-assisted internship matching platform that connects students, companies, a
 
 - Node.js 22+
 - MongoDB database
-- Cloudflare R2 bucket and credentials
 - Google GenAI access if you want the AI features enabled
 
 ### Install
@@ -64,19 +63,12 @@ Create a `.env.local` file with values similar to these:
 ```env
 db_atlas_uri=your_mongodb_connection_string
 
-R2_ENDPOINT=your_r2_endpoint
-R2_ACCESS_KEY_ID=your_r2_access_key_id
-R2_SECRET_ACCESS_KEY=your_r2_secret_access_key
-R2_BUCKET_NAME=your_r2_bucket_name
-R2_PUBLIC_BASE_URL=your_public_r2_base_url
-
-R2_ENDPOINT_COMPANY_LOGO=your_company_logo_r2_endpoint
-R2_ACCESS_KEY_ID_COMPANY_LOGO=your_company_logo_access_key
-R2_SECRET_ACCESS_KEY_COMPANY_LOGO=your_company_logo_secret_key
-R2_BUCKET_NAME_COMPANY_LOGO=your_company_logo_bucket_name
-
 NEXTAUTH_SECRET=your_nextauth_secret
 ```
+
+Uploaded resumes, profile pictures, and company logos are stored in the local
+`attachments/` directory. The directory is created automatically when the
+first file is uploaded and is ignored by Git.
 
 ### Run Locally
 

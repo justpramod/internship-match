@@ -17,7 +17,7 @@ export default function ApplicationStatusGraphSection({
   const colorsMap = new Map([
     ["Applied", "#15803d"],
     ["Pending", "#ff6700"],
-    ["Shortlisted", "#23b057"],
+    ["Shortlisted", "#2563eb"],
     ["Rejected", "#f92c37"],
   ]);
 

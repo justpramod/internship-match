@@ -17,7 +17,7 @@ export default function ConfirmPopup({
 
   const status = value === "Shortlist" ? "accepted" : "rejected";
 
-  const colour = value === "Shortlist" ? "#86efac" : "#ef8686";
+  const colour = value === "Shortlist" ? "#93c5fd" : "#ef8686";
 
   useEffect(() => {
     if (!open) {
@@ -31,7 +31,7 @@ export default function ConfirmPopup({
       {" "}
       <DialogTrigger>
         <div
-          className={`flex items-center hover:opacity-70 active:opacity-50 transition-all duration-100 ease-in-out h-10 ${value === "Shortlist" ? "bg-[#15803d] text-white" : " bg-[#f5f6fc] border"} cursor-pointer rounded px-6 py-1 max-w-fit`}
+          className={`flex items-center hover:opacity-70 active:opacity-50 transition-all duration-100 ease-in-out h-10 ${value === "Shortlist" ? "bg-blue-600 text-white" : " bg-[#f5f6fc] border"} cursor-pointer rounded px-6 py-1 max-w-fit`}
         >
           {value}
         </div>

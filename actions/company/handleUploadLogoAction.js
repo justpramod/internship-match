@@ -3,11 +3,7 @@
 import { auth } from "@/lib/auth";
 import dbConnect from "@/lib/dbConnect";
 import CompanyProfile from "@/lib/models/companyProfile-model";
-import {
-  DeleteObjectCommand,
-  PutObjectCommand,
-  S3Client,
-} from "@aws-sdk/client-s3";
+import { deleteLocalFile, saveLocalFile } from "@/lib/localStorage";
 import { revalidatePath } from "next/cache";
 import sharp from "sharp";
 
@@ -42,27 +38,8 @@ export default async function handleUploadLogoAction(prevVal, formData) {
       .jpeg({ quality: 80 }) //compress
       .toBuffer();
 
-    //save the image to cloudflare
-
     const uniqueKey = `company-logo/${Date.now()}-${image.name}`;
-
-    const command = new PutObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME_COMPANY_LOGO,
-      Key: uniqueKey,
-      Body: compressedImageBuffer,
-      ContentType: image.type,
-    });
-
-    const s3Client = new S3Client({
-      region: "auto",
-      endpoint: process.env.R2_ENDPOINT_COMPANY_LOGO,
-      credentials: {
-        accessKeyId: process.env.R2_ACCESS_KEY_ID_COMPANY_LOGO,
-        secretAccessKey: process.env.R2_SECRET_ACCESS_KEY_COMPANY_LOGO,
-      },
-    });
-
-    await s3Client.send(command);
+    await saveLocalFile(uniqueKey, compressedImageBuffer);
 
     //save the image url to db
     //
@@ -78,17 +55,11 @@ export default async function handleUploadLogoAction(prevVal, formData) {
     company.save();
     revalidatePath("/company/profile");
 
-    //delete previous logo
-    const deleteCommand = new DeleteObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME_COMPANY_LOGO,
-      Key: previousLogoKey,
-    });
-
     try {
       //donot disturb the upload process if deletion of previous logo fails.
       console.log(previousLogoKey);
       if (previousLogoKey && !previousLogoKey.startsWith("http"))
-        await s3Client.send(deleteCommand);
+        await deleteLocalFile(previousLogoKey);
     } catch (error) {
       console.log(error);
     }

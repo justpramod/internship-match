@@ -3,9 +3,8 @@
 import { auth } from "@/lib/auth";
 import dbConnect from "@/lib/dbConnect";
 import StudentProfile from "@/lib/models/studentProfile-model";
-import { s3Client } from "@/lib/r2";
+import { deleteLocalFile, saveLocalFile } from "@/lib/localStorage";
 import handleStudentSkillsParse from "@/lib/utils/handleStudentSkillsParse";
-import { DeleteObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { revalidatePath } from "next/cache";
 
 export default async function handleResumeSubmitAction(prevState, formData) {
@@ -36,16 +35,7 @@ export default async function handleResumeSubmitAction(prevState, formData) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    /// Upload to R2 usinf putObjextCommand
-    //
-    const command = new PutObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME,
-      Key: uniqueName,
-      Body: buffer,
-      ContentType: file.type,
-    });
-
-    await s3Client.send(command);
+    await saveLocalFile(uniqueName, buffer);
 
     await dbConnect();
 
@@ -79,16 +69,10 @@ export default async function handleResumeSubmitAction(prevState, formData) {
     student.save();
 
     revalidatePath("/student/profile");
-    //delete previous pic
-    const deleteCommand = new DeleteObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME,
-      Key: previousResumeKey,
-    });
-
     try {
       if (previousResumeKey && previousResumeKey.length !== 0) {
         console.log("deleting previous resume");
-        await s3Client.send(deleteCommand);
+        await deleteLocalFile(previousResumeKey);
       }
     } catch (error) {
       console.log(error);

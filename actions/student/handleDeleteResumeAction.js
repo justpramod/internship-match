@@ -3,8 +3,7 @@
 import { auth } from "@/lib/auth";
 import dbConnect from "@/lib/dbConnect";
 import StudentProfile from "@/lib/models/studentProfile-model";
-import { s3Client } from "@/lib/r2";
-import { DeleteObjectCommand } from "@aws-sdk/client-s3";
+import { deleteLocalFile } from "@/lib/localStorage";
 
 export default async function handleDeleteResumeAction() {
   try {
@@ -29,12 +28,7 @@ export default async function handleDeleteResumeAction() {
 
     const filePath = student.resume_details.file_key;
 
-    const command = new DeleteObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME,
-      Key: filePath,
-    });
-
-    await s3Client.send(command);
+    await deleteLocalFile(filePath);
     student.resume_details = null;
     student.parsed_skills = undefined;
     await student.save();

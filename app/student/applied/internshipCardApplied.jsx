@@ -10,7 +10,7 @@ export default function InternshipCardApplied({ internshipData, companyLogo }) {
 
   const colorsMap = {
     pending: "#dbeafe",
-    accepted: "#d1fae5",
+    accepted: "#bfdbfe",
     rejected: "#fee2e2",
   };
   return (

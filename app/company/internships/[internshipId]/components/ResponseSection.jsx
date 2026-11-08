@@ -45,7 +45,7 @@ export default function ResponseSection({ applicantInfo, noRedirect }) {
           {applicantInfo.status === "accepted" ? (
             <p
               className="font-medium  px-4 rounded py-2"
-              style={{ backgroundColor: "#86efac " }}
+              style={{ backgroundColor: "#93c5fd" }}
             >
               Shortlisted
             </p>

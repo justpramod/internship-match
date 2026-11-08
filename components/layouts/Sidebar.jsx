@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 export default function SideNavbar({ navLinks }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const pathname = usePathname();
   return <>
     <button
       type="button"
@@ -37,16 +39,25 @@ export default function SideNavbar({ navLinks }) {
           </div>
 
           <div className="flex flex-col gap-3">
-            {navLinks.map((link) => (
+            {navLinks.map((link) => {
+              const isActive =
+                pathname === link.href || pathname.startsWith(`${link.href}/`);
+
+              return (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsSidebarOpen(false)}
-                className="rounded-xl bg-[#ebf1f7] px-4 py-3 text-base font-medium text-slate-800 transition hover:opacity-80"
+                className={`rounded-xl px-4 py-3 text-base font-medium transition hover:opacity-80 ${
+                  isActive
+                    ? "bg-[#D1FAE5] text-green-800"
+                    : "bg-[#ebf1f7] text-slate-800"
+                }`}
               >
                 {link.label}
               </Link>
-            ))}
+              );
+            })}
           </div>
         </aside>
       </div>

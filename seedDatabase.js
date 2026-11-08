@@ -7,7 +7,11 @@ import Internship from "./lib/models/internship-model.js";
 import Application from "./lib/models/application-model.js";
 import Sector from "./lib/models/sector-model.js";
 
-const MONGODB_URI = "";
+const MONGODB_URI = process.env.db_atlas_uri;
+
+if (!MONGODB_URI) {
+  throw new Error("Missing db_atlas_uri environment variable.");
+}
 async function connectToDatabase() {
   if (mongoose.connection.readyState >= 1) return;
   await mongoose.connect(MONGODB_URI);
@@ -252,106 +256,121 @@ export async function seedDatabase() {
       company_id: companyUsers[0]._id,
       name: "Google",
       logo: "",
-      website: ["https://google.com"],
+      website: "https://google.com",
       industry: "Technology",
+      contact: { email: "hr@google.com" },
     },
     {
       company_id: companyUsers[1]._id,
       name: "Microsoft",
       logo: "",
-      website: ["https://microsoft.com"],
+      website: "https://microsoft.com",
       industry: "Technology",
+      contact: { email: "jobs@microsoft.com" },
     },
     {
       company_id: companyUsers[2]._id,
       name: "Amazon",
       logo: "",
-      website: ["https://amazon.com"],
+      website: "https://amazon.com",
       industry: "E-commerce & Cloud",
+      contact: { email: "careers@amazon.com" },
     },
     {
       company_id: companyUsers[3]._id,
       name: "Spotify",
       logo: "",
-      website: ["https://spotify.com"],
+      website: "https://spotify.com",
       industry: "Music Streaming",
+      contact: { email: "hr@spotify.com" },
     },
     {
       company_id: companyUsers[4]._id,
       name: "Tesla",
       logo: "",
-      website: ["https://tesla.com"],
+      website: "https://tesla.com",
       industry: "Automotive & Energy",
+      contact: { email: "hr@tesla.com" },
     },
     {
       company_id: companyUsers[5]._id,
       name: "Netflix",
       logo: "",
-      website: ["https://netflix.com"],
+      website: "https://netflix.com",
       industry: "Entertainment",
+      contact: { email: "talent@netflix.com" },
     },
     {
       company_id: companyUsers[6]._id,
       name: "Meta",
       logo: "",
-      website: ["https://meta.com"],
+      website: "https://meta.com",
       industry: "Social Media & VR",
+      contact: { email: "recruiting@meta.com" },
     },
     {
       company_id: companyUsers[7]._id,
       name: "Apple",
       logo: "",
-      website: ["https://apple.com"],
+      website: "https://apple.com",
       industry: "Consumer Electronics",
+      contact: { email: "jobs@apple.com" },
     },
     {
       company_id: companyUsers[8]._id,
       name: "Adobe",
       logo: "",
-      website: ["https://adobe.com"],
+      website: "https://adobe.com",
       industry: "Software",
+      contact: { email: "careers@adobe.com" },
     },
     {
       company_id: companyUsers[9]._id,
       name: "Shopify",
       logo: "",
-      website: ["https://shopify.com"],
+      website: "https://shopify.com",
       industry: "E-commerce",
+      contact: { email: "hr@shopify.com" },
     },
     {
       company_id: companyUsers[10]._id,
       name: "Uber",
       logo: "",
-      website: ["https://uber.com"],
+      website: "https://uber.com",
       industry: "Ride Hailing",
+      contact: { email: "jobs@uber.com" },
     },
     {
       company_id: companyUsers[11]._id,
       name: "Airbnb",
       logo: "",
-      website: ["https://airbnb.com"],
+      website: "https://airbnb.com",
       industry: "Hospitality",
+      contact: { email: "careers@airbnb.com" },
     },
     {
       company_id: companyUsers[12]._id,
       name: "Stripe",
       logo: "",
-      website: ["https://stripe.com"],
+      website: "https://stripe.com",
       industry: "Fintech",
+      contact: { email: "hr@stripe.com" },
     },
     {
       company_id: companyUsers[13]._id,
       name: "Twilio",
       logo: "",
-      website: ["https://twilio.com"],
+      website: "https://twilio.com",
       industry: "Communications",
+      contact: { email: "jobs@twilio.com" },
     },
     {
       company_id: companyUsers[14]._id,
       name: "Datadog",
       logo: "",
-      website: ["https://datadog.com"],
+      website: "https://datadog.com",
       industry: "Monitoring",
+      contact: { email: "careers@datadog.com" },
     },
   ]);
 

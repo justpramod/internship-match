@@ -5,7 +5,7 @@ import WithdrawButton from "@/app/student/applied/WithdrawButton";
 export default async function ApplicationDetailsSection({ internshipData }) {
   const colorsMap = {
     pending: "#dbeafe",
-    accepted: "#d1fae5",
+    accepted: "#bfdbfe",
     rejected: "#fee2e2",
   };
   const dataArray = [
