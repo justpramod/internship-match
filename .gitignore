@@ -42,5 +42,6 @@ next-env.d.ts
 
 # local uploaded files
 /attachments/
+/uploads/
 
 test.js
